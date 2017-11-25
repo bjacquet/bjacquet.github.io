@@ -8,11 +8,13 @@ I consider myself an all-rounder programmer with an affection toward (so called)
 
 Recently started contributing to [ProtonMail](https://protonmail.com/) by translating their products into Portuguese.
 
-# Seven Wonders
+# ++Seven Wonders++
 
+[![Exercism](../media/exercism.png)](http://exercism.io/bjacquet)
 [![GitHub](../media/github.png)](https://github.com/bjacquet)
 [![GitLab](../media/gitlab.png)](https://gitlab.com/bjacquet)
 [![GoodReads](../media/goodreads.png)](https://www.goodreads.com/user/show/8450215-jacquet)
+[![HackerRank](../media/hackerrank.png)](https://www.hackerrank.com/bjacquet)
 [![Keybase](../media/keybase.png)](https://keybase.io/brunjact)
 [![Linkedin](../media/linkedin.png)](https://www.linkedin.com/in/bruno-jacquet-753950152/)
 [![StackOverflow](../media/stackoverflow.png)](https://stackoverflow.com/users/941445/bjacquet)
