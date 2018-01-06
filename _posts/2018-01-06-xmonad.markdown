@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Xmonad and Amethyst"
+date:   2018-01-06 18:19:00 +0200
+categories: [xmonad, amethyst, window manager]
+---
+
+On my last months of using Linux at home I began
+using [xmonad](http://xmonad.org/). Xmonad is a window manager for
+Linux which takes care of the window's position an size making all
+windows visible, a tiling window manager. At the time I also
+"discovered" Haskell. Xmonad is written in Haskell. :heart_eyes: I was
+both curious to use it and supportive for being written in it.
+
+I then switched to OS X and stop using it.
+
+Last week I was searching for a window manager for macOS. Something
+resembling Windows 10's, which I use at work, would sufice. I
+discovered [Amethyst](https://ianyh.com/amethyst/). Amethyst is a
+tiling window manager based on xmonad although not written in Haskell.
+
+## Amethyst Shortcuts
+
+Amethyst has many keyboard shortcuts. These are the ones I use more often:
+
+* `Alt+Shift+K` Next Window
+* `Alt+Shift+J` Previous Window
+
+* `Alt+Shift+Ctrl+K` Move Window to Next Position
+* `Alt+Shift+Ctrk+J` Move Window to Previous Position
+
+* `Alt+Shift+return` Switch with Main Window
+
+* `Alt+Shift+H` Move Border Left
+* `Alt+Shift+L` Move Border Right
+
+* `Alt+Shift+SPC` Cycle Layouts
+
+* `Alt+Shift+,` Add a Window to Left Pane
+* `Alt+Shift+.` Add a Window to Right Pane
