@@ -9,8 +9,8 @@ On my last months of using Linux at home I began
 using [xmonad](http://xmonad.org/). Xmonad is a window manager for
 Linux which takes care of the window's position an size making all
 windows visible, a tiling window manager. At the time I also
-"discovered" Haskell. Xmonad is written in Haskell. :heart_eyes: I was
-both curious to use it and supportive for being written in it.
+"discovered" Haskell. Xmonad is written in Haskell. 🤩 I was both
+curious to use it and supportive for being written in it.
 
 I then switched to OS X and stop using it.
 
