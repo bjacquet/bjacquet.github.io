@@ -7,8 +7,7 @@ categories: [spectacle, amethyst, window manager]
 
 After trying out a few window managers (macOS) my _weapon of choice_
 was down to two. The [Amethyst](https://ianyh.com/amethyst/), which
-I've addressed [previously]({{ site.baseurl }}{% link
-_posts/2016-07-26-name-of-post.md %}), and the
+I've addressed [previously]({{ site.baseurl }}{% link_posts/2018-01-06-xmonad.markdown %}), and the
 [Spectacle](https://www.spectacleapp.com/).
 
 They behave so differently from each other that I favour Amethyst when
