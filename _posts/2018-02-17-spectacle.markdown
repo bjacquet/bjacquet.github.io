@@ -18,14 +18,14 @@ Spectacle to move windows to one of the sides or center.
 
 Most used shortcuts:
 
-* `Alt+Command+&uarr;` Move Window Top Half
-* `Alt+Command+&rarr;` Move Window Right Half
-* `Alt+Command+&darr;` Move Window Bottom Half
-* `Alt+Command+&larr;` Move Window Left Half
+* `Alt+Command+↑` Move Window Top Half
+* `Alt+Command+→` Move Window Right Half
+* `Alt+Command+↓` Move Window Bottom Half
+* `Alt+Command+←` Move Window Left Half
 
 * `Alt+Command+C` Center Window
 
-* `Alt+Ctrl+&rarr;` Move Window Top Right Corner
-* `Alt+Ctrl+&larr;` Move Window Top Left Corner
-* `Alt+Ctrl+Shift+&rarr;` Move Window Bottom Right Corner
-* `Alt+Ctrl+Shift+&larr;` Move Window Bottom Left Corner
+* `Alt+Ctrl+→` Move Window Top Right Corner
+* `Alt+Ctrl+←` Move Window Top Left Corner
+* `Alt+Ctrl+Shift+→` Move Window Bottom Right Corner
+* `Alt+Ctrl+Shift+←` Move Window Bottom Left Corner
