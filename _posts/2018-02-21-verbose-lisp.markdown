@@ -1,4 +1,5 @@
---- layout:
+---
+layout:
 post title: "Verbose Lisp"
 date: 2018-02-21 21:48:00 +0000
 categories: [lisp, hello-world]
