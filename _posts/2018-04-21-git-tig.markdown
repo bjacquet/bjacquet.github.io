@@ -5,7 +5,7 @@ date:   2018-04-21 12:49:16 +0200
 categories: git tig
 ---
 
-Yesterday I saw [this|monades] post about [tig|tig]. Tig is a
+Yesterday I saw [this][monades] post about [tig][tig]. Tig is a
 text-mode interface for Git. More goodies for those who don't want to
 leave the command line!
 
@@ -14,7 +14,7 @@ with it. You can neither push or pull. Tig is makes history inspection
 quick and easy. I don't find the commit workflow to be very
 straightforward.
 
-As for Git IDEs go, [Magit|magit] is still the #1 for me.
+As for Git IDEs go, [Magit][magit] is still the #1 for me.
 
 [monades]: https://monades.roperzh.com/weekly-command-going-over-git-history-with-tig/
 [tig]: https://github.com/jonas/tig
