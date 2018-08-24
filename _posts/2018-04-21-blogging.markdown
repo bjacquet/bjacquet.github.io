@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Blogging away!"
+date:   2018-08-24 18:39:16 +0000
+categories: git tig
+---
+
+Since I joinned [Runtime][rr] I've written two posts for the company [blog][blog]. Wow! ;-)
+
+You can check them out [here][h1] and [here][h2]. Small technical stuff. Not very deep.
+
+[rr]: https://www.runtime-revolution.com/
+[blog]: https://revs.runtime-revolution.com/
+[h1]: https://revs.runtime-revolution.com/transposing-lisp-into-ruby-32645502f118
+[h2]: https://revs.runtime-revolution.com/calculating-route-e0f8a052b844
