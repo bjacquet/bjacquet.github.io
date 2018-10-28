@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "A Lightning Talk and a Blogpost"
+date:   2018-10-28 14:40:00 +0000
+categories: lisp lightning-talk blogpost runtime-revolution
+---
+
+This week was quite busy. On Tuesday my post [_Four things about
+Pry_](https://revs.runtime-revolution.com/four-things-about-pry-a0ebb10c6c2e)
+was published on my company's [blog](https://revs.runtime-revolution.com/). It
+is about some features which I find really useful for debugging Ruby code.
+
+And then on Thursday I made a lightning talk about Lisp. In it I attempt to give
+some insight some of Lisp's often joked and praised about features:
+- Parenthesis
+- Prefix notation
+- Recursion
+- Functional programming
+
+Had to remove **macros** due to time restrictions. (slides are [here](https://bjacquet.github.io/extras/lisp-speech-therapy/presentation.html))

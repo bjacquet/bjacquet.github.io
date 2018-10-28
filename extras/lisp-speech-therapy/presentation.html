@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif';  }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; font-size: 26px; }
+    </style>
+
+    <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, title-slide
+
+# Lisp Speech Therapy
+### (Or: trying to explain some misconceptions about Lisp)
+[![Runtime Revolution](assets/images/rr.png)](https://www.runtime-revolution.com)
+
+---
+
+class: center, middle
+
+# Bruno Jacquet
+
+--
+
+![SISCOG](assets/images/siscog.jpg)
+
+--
+
+![Lisp](assets/images/lisp.png)
+
+---
+
+background-size: 200%
+background-image: url(assets/images/lisp.png)
+class: middle
+font-size: 18px
+
+
+```lisp
+λ "Farewell SISCOG!"
+"Farewell SISCOG!"
+
+λ (format t
+          "~{~a~^, ~}."
+          (loop for n from 10 to 15
+                for f = (mod n 3)
+                for b = (mod n 5)
+                collect (format nil
+                                "~[fizz~]~[buzz~]~[~:;~d~]"
+                                f
+                                b
+                                (* f b)
+                                n))
+"buzz, 11, fizz, 13, 14, fizzbuzz."
+```
+
+---
+
+background-color: #eb5745
+background-size: 70%
+background-image: url(assets/images/ruby.png)
+class: middle
+
+```ruby
+> "Hello, Runtime Revolution!"
+"Hello, Runtime Revolution!"
+
+> (10..15).map do |i|
+    x = ''
+    x += 'fizz' if i % 3 == 0
+    x += 'buzz' if i % 5 == 0
+    x.empty? ? i.to_s : x.to_s
+  end.join(', ') + '.'
+"buzz, 11, fizz, 13, 14, fizzbuzz."
+```
+
+---
+
+class: center, middle
+
+# Define Lisp
+
+---
+
+background-color: black
+background-image: url(assets/images/John-McCarthy.jpg)
+background-size: contain
+
+???
+Hard to pinpoint when Lisp was created. 1958~1962
+
+In 1960 John McCarthy released paper "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I".
+
+There, he showed that with a few simple operators and a notation for functions, one can build a Turing-complete language for algorithms.
+
+Turing-complete: which can simulate a Turing machine.
+
+---
+
+class: center, middle
+
+# Define Lisp in 2018
+
+--
+
+## Lisp is not a programming language
+
+--
+
+## Lisp is a **family** of programming languages
+
+--
+
+![dialects](assets/images/dialects.png)
+
+???
+Most likely when referring to 'Lisp' one is referring to 'Common Lisp'.
+
+---
+
+class: center, middle
+
+# Define Lisp in 2018
+## Lisp is not a programming language
+## Lisp is a **family** of programming languages
+
+![dialects](assets/images/common-lisp.png)
+
+---
+
+class: center, middle
+
+# _"…show me the code."_
+![lisp](assets/images/lisp-final.png)
+
+---
+
+# Parenthesis Everywhere
+
+```lisp
+(defun birthday-paradox (probability people)
+  (let ((new-probability (* (/ (- +year-size+ people)
+                               +year-size+)
+                            probability)))
+    (if (< new-probability 0.5)
+        (1+ people)
+        (birthday-paradox new-probability (1+ people)))))
+```
+
+```lisp
+λ (list 1 "b" 'c #'+)
+(1 "b" c +)
+```
+
+* Expression delimiters
+
+* Represent data as lists
+
+???
+Parenthesis are the only delimiters.
+
+Newcomers have a hard counting them.
+
+Old-timers follow the flow by indentation.
+
+"In my time" Lisp was taught in pen-n-paper!
+
+One had to keep track of open '('
+
+Although important, it push the student away from the language.
+
+---
+
+# Delimiters Ruby
+
+```ruby
+def permutation(l = [])
+  for e in 1..6
+    a, i = [], e-2
+    (0..l.length-e+1).each do |g|
+       if not (n = l[g..g+e-2]).uniq!
+         a.concat(n[(a[0]? i : 0)..-1]).push(e).concat(n)
+         i = e-2
+       else
+         i -= 1
+       end
+     end
+     a.each { |n| print n }; puts "\n\n"
+     l = a
+  end
+end
+```
+
+???
+def end for function block
+
+() for function arguments
+
+, to separate arguments
+
+in/do end for iteration block
+
+{} for iteration block (alternative)
+
+[] for array accessor
+
+. to call instance class function
+
+---
+
+# Prefix Notation
+
+![frame](assets/images/frame.jpg)
+
+???
+Devs joke that you have to put every command upfront.
+
+--
+
+```lisp
+(if (< new-probability 0.5)
+    (setq people (+ people 1))
+    (birthday-paradox new-probability (1+ people))))
+```
+
+???
+It actually looks good for if conditionals.
+
+But not so much on lesser-then.
+
+Overall, is no different from calling functions all the time.
+
+---
+
+layout: true
+class: split-two with-thick-border border-white
+
+.column.bg-main1[.content[
+# Prefix Notation
+
+```lisp
+λ (/ (+ (- b)
+        (sqrt (- (expt b 2)
+                 (* 4 a c))))
+     (* 2 a))
+42
+```
+&lt;br&gt;
+```lisp
+λ (+ 1 2 3 4)
+10
+```
+
+]]
+
+.column.bg-main2[.content[
+# Infix Notation
+
+```ruby
+> (-b + Math.sqrt(b**2 - 4 * a * c)) /
+  (2 * a)
+42
+```
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
+```ruby
+> 1 + 2 + 3 + 4
+=> 10
+```
+]]
+
+---
+
+class: show-100
+
+???
+Simple formula look like jigsaw puzzles.
+
+---
+
+class: show-110
+count: false
+
+???
+Much more readable.
+
+But not as versatile.
+
+---
+
+layout: false
+background-image: url(assets/images/recursion.jpg)
+background-size: 50%
+
+# Recursion
+
+???
+Some devs talk about recursion as if only some languages have it.
+
+---
+
+# Recursion
+
+```lisp
+(defun factorial (n)
+  (factorial-aux n 1))
+
+(defun factorial-aux (n a)
+  (if (= n 1)
+      a
+      (factorial-aux (- n 1) (* n a))))
+```
+
+???
+Recursion is not exclusive to Lisp
+
+Every language has it.
+
+---
+
+# Recursion
+
+```ruby
+def factorial(n)
+  factorial_aux(n, 1)
+end
+
+def factorial-aux(n, a)
+  n == 1 ? a : factorial_aux(n - 1, n * a)
+end
+```
+
+???
+Could it be that other languages aren't as optimized as Lisp for tail recursion?
+
+--
+
+```ruby
+def factorial(n)
+  return 1 if n == 0
+  (1..n).inject(:*)
+end
+```
+
+???
+A more rubyist way of doing it.
+
+---
+
+# Functional Programming
+## Higher-order functions
+## Purity
+## Recursion
+
+???
+There is a hype on Functional Programming.
+
+And devs tend to associate Lisp with it.
+
+--
+
+### Lisp has these features and so does Ruby
+### Yet neither are considered _pure_ functional
+
+???
+
+- functions are passed as arguments to other functions or returned as results.
+- functions without side effects, don't change the state.
+- same input return same output.
+- functions that call themselves.
+
+Not pure because they have mutable variables.
+
+---
+
+# Functional Programming
+
+```lisp
+(defun look ()
+  (append (describe-location *location* *map*)
+          (describe-paths *location* *map*)
+          (describe-floor *location* *objects* *object-locations*)))
+```
+
+--
+
+.center[![functional](assets/images/functional.jpg)]
+
+???
+Function with side effects, increments `counter` in the background.
+`counter` is actually *15*.
+
+---
+
+class: middle center
+
+# Topics Covered
+## History
+## Syntax
+## Recursion
+## Functional Programming
+
+---
+
+class: middle center
+
+# Other Topics
+## Macros
+## Is slooooow
+## It's only for AI
+## No one else uses it
+## There's no GUI in Lisp
+## Doesn't have good IDE
+
+---
+
+class: middle center
+
+# Thank you!
+
+![thanks](assets/images/lisp_cycles.png)
+
+---
+
+# Notes & References
+
+* _Casting Spels in Lisp_, http://www.lisperati.com/casting.html
+
+* _Features of Common Lisp_, Abhishek Reddy, http://random-state.net/features-of-common-lisp.html
+
+* _HaskellWiki_, https://wiki.haskell.org/Functional_programming
+
+* _Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I_, John McCarthy, 1960
+
+* _Successful Lisp_, David B. Lamkins, 2004
+
+    </textarea>
+    <script src="libs/remark.min.js" type="text/javascript"></script>
+    <script>
+      var slideshow = remark.create({
+        "ratio": "16:9",
+        "highlightStyle": "tomorrow-night",
+        "highlightLines": "true"
+      });
+    </script>
+  </body>
+</html>
