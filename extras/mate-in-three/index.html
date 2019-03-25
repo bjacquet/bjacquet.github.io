@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Mate in Three</title>
+
+    <link rel="stylesheet" href="reveal.js-3.7.0/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js-3.7.0/css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js-3.7.0/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-3.7.0/css/print/pdf.css' : 'reveal.js-3.7.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Mate in Three</h1>
+          <p>Spreading the enjoyment of chess<br />one movent* at the time,</p>
+          <p><small>by Bruno Jacquet</small></p>
+          <p><small><strong>*movent</strong>, noun, <strong>1.</strong> that which moves anything, <strong>2.</strong> blend of <em>movement</em> + <em>event</em></small></p>
+        </section>
+        <section>
+          <section>
+            <img src="images/chess_players.png" />
+          </section>
+          <section>
+            <img src="images/7seal.jpeg" />
+            <p><small>The Seventh Seal, Ingmar Bergman, 1957</small></p>
+          </section>
+          <section>
+            <img src="images/2001.png" />
+            <p><small>2001: A Space Odyssey, Stanley Kubrick, 1968</small></p>
+          </section>
+          <section>
+            <img src="images/1283-Alfonso-chess-problem-from-the-Libro-de-los-juegos.jpg" />
+            <p><small>Libro de los Juegos, 1283</small></p>
+          </section>
+          <section>
+            <img src="images/itsnotwar.png">
+            <p><small>(It's not War) Just the end of Love, Manic Street Preachers, 2010</small>
+            </p>
+          </section>
+          <section>
+            <img src="images/747133.jpg" width="40%">
+            <p><small>Superman, Action Comics 112, 1947</small>
+            </p>
+          </section>
+          <section>
+            <img src="images/113310.jpg">
+            <p><small>The Eight, Katherine Neville, 1988</small></p>
+          </section>
+          <section>
+            <img src="images/1480-Game-of-Chess-by-Girolamo-da-Cremona.jpg" />
+            <p><small>Game of Chess, Girolamo da Cremona, 1480</small></p>
+          </section>
+          <section>
+            <img src="images/1865-The-Chess-Players-by-Honoré-Daumier.jpg" width="70%" />
+            <p><small>The Chess Players, Honoré Daumier, 1865</small></p>
+          </section>
+          <section>
+            <img src="images/Spectre 01.jpg" />
+            <p><small>Spectre, Sam Mendes, 2015</small></p>
+          </section>
+          <section>
+            <img src="images/1555-Artists-Sister-Playing-Chess-Sofonisba-Anguissola.jpg" width="70%" />
+            <p><small>Artists Sister Playing Chess, Sofonisba Anguissola, 1555</small></p>
+          </section>
+          <section>
+            <img src="images/8617429-Bratislava-street-chess-0.jpg">
+            <p><small>Bratislava, Slovakia</small></p>
+          </section>
+          <section>
+            <img src="images/1929-The-Chess-Players-by-John-Lavery.jpg" width="70%"/>
+            <p><small>The Chess Players, John Lavery, 1929</small></p>
+          </section>
+          <section>
+            <img src="images/checa r.jpg" width="45%"/>
+            <p><small>Prague, Check Republic</small></p>
+          </section>
+          <section>
+            <img src="images/Casablanca 8.jpg" />
+            <p><small>Casablanca, Michael Curtiz, 1942</small></p>
+          </section>
+          <section>
+            <img src="images/X-Men First Class 01.jpg" />
+            <p><small>X-Men - First Class, Matthew Vaughn, 2011</small></p>
+          </section>
+          <section>
+            <img src="images/lo_checkeredfloor.jpg" />
+            <p><small>Lolita, Stanley Kubrick, 1962</small></p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Part I - the pieces</h1>
+            <a href="https://www.chess.com/analysis-board-editor" target="_blank">https://www.chess.com/analysis-board-editor</a>
+          </section>
+          <section>
+            <h2>King</h2>
+            <img src="images/pieces/king.gif" width="50%" />
+          </section>
+          <section>
+            <h2>Queen</h2>
+            <img src="images/pieces/queen.gif" width="50%" />
+          </section>
+          <section>
+            <h2>Rook</h2>
+            <img src="images/pieces/rook.gif" width="50%" />
+          </section>
+          <section>
+            <h2>Bishop</h2>
+            <img src="images/pieces/bishop.gif" width="50%" />
+          </section>
+          <section>
+            <h2>Knight</h2>
+            <img src="images/pieces/knight.gif" width="50%" />
+          </section>
+          <section>
+            <h2>Pawn</h2>
+            <img src="images/pieces/pawn.gif" width="50%" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Part II - the <span class="emoji">🇨🇿</span>mate</h1>
+          </section>
+          <section>
+            <h2>My approach method</h2>
+            <ul>
+              <li>Find the opponent King</li>
+              <li>Identify our best pieces</li>
+              <li>Visualize the threat</li>
+              <li>Anticipate King's defence</li>
+            </ul>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis-board-editor?fen=3Q4%2Fpp6%2F5p1p%2FP2R3P%2F4Pk2%2F8%2Fr2r4%2F6K1+b+-+-+1+1&flip=true&diagramType=tactic" target="_blank">Mate in 1, Black to play</a>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis-board-editor?fen=r1bq2k1%2Fppp2pp1%2F2P2p1p%2F8%2F1b2r3%2F6Q1%2FPPP2PPP%2F2KR1BNR+b+-+-+0+1&flip=true&diagramType=tactic" target="_blank">Mate in 2, Black to play</a>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis?fen=8%2F8%2F2R1p2r%2F1k6%2F8%2FPr6%2F2R4P%2F7K+w+-+-+0+2&flip=false&diagramType=tactic" target="blank">Mate in 2, White to play</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Part III - your move</h1>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis?fen=4r3%2Fkbp4q%2Fpp6%2F4P3%2F8%2F7P%2FPPP1Q1P1%2F3N2RK+b+-+-+1+1&flip=true&diagramType=tactic" target="_blank">Mate in 1, Black to play</a>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis?fen=r3k2r%2Fp1p2pq1%2F3p2pp%2F1p1N2Q1%2F1b1nPp2%2F1B1P3P%2FPPP2P2%2F2KR3R+w+kq+-+0+2&flip=false&diagramType=tactic" target="_blank">Mate in 1, White to play</a>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis-board-editor?fen=rnbq1b1r%2Fppp1n1p1%2F6k1%2F3BQ2p%2F4PP1P%2F8%2FPPPP2P1%2FRNB1K2R+w+KQ+-+1+2&flip=false&diagramType=tactic" target="_blank">Mate in 2, White to play</a>
+          </section>
+          <section>
+            <a href="https://www.chess.com/analysis-board-editor?fen=2Q5%2F5kp1%2Fpq5p%2F1p6%2F6P1%2F6KP%2FPP3r2%2FR7+b+-+-+1+1&flip=true&diagramType=tactic" target="_blank">Mate in 3, Black to play</a>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h1>Thank You!</h1>
+            <p><em>Mate in Three</em>, by Bruno Jacquet</p>
+            <a href="https://www.runtime-revolution.com/" target="blank"><img src="images/rr.png" style="border:0px; background:none; box-shadow:none;" /></a>
+            <p><small>Slides (also) available at<br /><a href="https://bjacquet.github.io/extras/mate-in-three/index.html" target="blank">bjacquet.github.io/extras/mate-in-three</a></small></p>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="reveal.js-3.7.0/lib/js/head.min.js"></script>
+    <script src="reveal.js-3.7.0/js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'reveal.js-3.7.0/plugin/markdown/marked.js' },
+          { src: 'reveal.js-3.7.0/plugin/markdown/markdown.js' },
+          { src: 'reveal.js-3.7.0/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js-3.7.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
