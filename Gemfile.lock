@@ -166,7 +166,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
-  kramdown-parser-gfm
   minima
 
 BUNDLED WITH
